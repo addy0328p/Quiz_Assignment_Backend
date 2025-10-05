@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 📝 Quiz Application - MERN Stack
 A modern, full-featured quiz application built with the MERN stack (MongoDB, Express.js, React, Node.js) featuring a sleek tech-inspired dark theme.
 
@@ -257,3 +258,6 @@ Caching: Browser caching for static assets
 Minification: Production builds are minified
 
 🐛 Known Issues & Solutions
+=======
+# Quiz_Assignment_Backend
+>>>>>>> 3028e80e22e2d2c17303344085d7e6bc6cf7c2d6
