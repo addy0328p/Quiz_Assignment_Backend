@@ -1,263 +1,137 @@
-<<<<<<< HEAD
-📝 Quiz Application - MERN Stack
-A modern, full-featured quiz application built with the MERN stack (MongoDB, Express.js, React, Node.js) featuring a sleek tech-inspired dark theme.
+# 🧠 Quiz Assignment - MERN Stack
 
-🔗 Repository Links
-Backend Repository: https://github.com/UtkarshxDD/quiz-app-backend
+A modern, fully-featured quiz application built using the **MERN stack (MongoDB, Express.js, React, Node.js)**.  
+It provides a clean UI, timed quiz functionality, and dynamic questions fetched from the Open Trivia Database API.
 
-🚀 Live Demo
-Frontend: https://quiz-app-frontend-eight-eta.vercel.app
+---
 
-Backend API: https://quiz-app-backend-2nnz.onrender.com
+## 🔗 Repository Links
 
-✨ Features
-Core Functionality
-📧 Email-based Quiz Sessions - Users start with email authentication
+- **Frontend Repository:** [Quiz Frontend Assignment](https://github.com/addy0328p/Quiz_frontend_assignment)
+- **Backend Repository:** [Quiz Assignment Backend](https://github.com/addy0328p/Quiz_Assignment_Backend)
+- **GitHub Profile:** [addy0328p](https://github.com/addy0328p)
+- **Live Backend API:** [https://quiz-assignment-backend.onrender.com](https://quiz-assignment-backend.onrender.com)
 
-⏰ 30-minute Timer - Countdown timer with auto-submit functionality
+---
 
-🎯 15 Dynamic Questions - Fetched from OpenTDB API
+## ✨ Features
 
-🧭 Question Navigation - Jump to any question with status tracking
+### Core Functionality
+- **📧 Email-based Quiz Start:** Users enter their email to begin the quiz session.
+- **⏰ 30-Minute Countdown Timer:** Timer is displayed at the top; quiz auto-submits when time expires.
+- **🎯 15 Dynamic Questions:** Pulled in real-time from the OpenTDB API.
+- **🧭 Navigation Panel:** Users can jump between questions with clear status (visited/attempted).
+- **📊 Result Page:** Displays each question, user’s answer, and the correct answer side by side.
 
-📊 Detailed Results - Comprehensive answer comparison and scoring
+### User Experience
+- **🎨 Tech-inspired UI:** Dark theme with smooth transitions and modern layout.
+- **📱 Responsive Design:** Works seamlessly across desktop, tablet, and mobile devices.
+- **⚡ Smooth Transitions:** Animated navigation between questions.
+- **📈 Progress Indicators:** Tracks visited and attempted questions in real-time.
 
-🔄 Auto-submit - Quiz automatically submits when timer expires
+---
 
-User Experience
-🎨 Modern Tech UI - Dark theme with neon green accents
+## 🧩 Requirements (as per assignment)
 
-📱 Fully Responsive - Works on desktop, tablet, and mobile
+### 1. **Layout & Flow**
+- A start page where users submit their **email address**.
+- **15 questions** are displayed one by one.
+- A **30-minute timer** counts down from the top and **auto-submits** upon timeout.
 
-⚡ Real-time Updates - Question status and progress tracking
+### 2. **Navigation**
+- Users can navigate freely to any question.
+- Overview panel indicates:
+  - Which questions are **visited**.
+  - Which ones are **attempted**.
 
-🎭 Smooth Animations - Enhanced user interactions
+### 3. **End of Quiz**
+- When the quiz ends (either manually submitted or timer expires), users are redirected to a **report page**.
+- This report shows:
+  - Each question.
+  - The **user’s answer** and the **correct answer**, displayed side by side for comparison.
 
-📈 Progress Analytics - Track attempted vs visited questions
+### 4. **Data Source**
+- Questions are fetched from the [Open Trivia DB API](https://opentdb.com/api.php?amount=15).
+- The API provides:
+  - `question`, `correct_answer`, and `incorrect_answers`.
+- Choices displayed = concatenation of `correct_answer + incorrect_answers`.
 
-Technical Features
-🔒 Data Persistence - MongoDB stores quiz sessions and results
+---
 
-🌐 RESTful API - Clean API architecture
+## ⚙️ Technical Details
 
-🎪 State Management - React Context for global state
+### **Frontend**
+- **Framework:** React 18  
+- **State Management:** React Context API  
+- **HTTP Client:** Axios  
+- **Styling:** Custom CSS (Dark theme)  
+- **Deployment:** Vercel  
 
-🛡️ Error Handling - Comprehensive error management
+### **Backend**
+- **Runtime:** Node.js  
+- **Framework:** Express.js  
+- **Database:** MongoDB (via Mongoose ODM)  
+- **API Type:** RESTful  
+- **Deployment:** Render  
+- **Live URL:** [https://quiz-assignment-backend.onrender.com](https://quiz-assignment-backend.onrender.com)
 
-📋 Input Validation - Frontend and backend validation
+### **APIs**
+- `POST /api/quiz/start` – Start a quiz session  
+- `PUT /api/quiz/question/:quizId/:questionId` – Update question progress  
+- `POST /api/quiz/submit/:quizId` – Submit the quiz  
+- `GET /api/quiz/results/:quizId` – Retrieve result data  
+- `GET /api/health` – Health check  
 
-🛠️ Technology Stack
-Frontend
-React 18 - UI framework
+---
 
-React Context API - State management
+## 🧠 Judgment Criteria
 
-Axios - HTTP client
+### 1. **Functionality**
+- All requirements (layout, timer, navigation, and result page) are fully implemented and work correctly.
 
-CSS3 - Custom styling with modern design
+### 2. **Bug-Free Code**
+- The application runs without runtime or logical errors.
+- Proper error handling is implemented on both frontend and backend.
 
-Vercel - Deployment platform
+### 3. **Code Quality**
+- Clean, modular, and well-organized code.
+- Consistent naming conventions.
+- Comments used **judiciously** for complex or non-intuitive logic.
 
-Backend
-Node.js - Runtime environment
+---
 
-Express.js - Web framework
+## 🚀 Submission & Hosting
 
-MongoDB - Database
+### Hosted On:
+- **Frontend:** Vercel  
+- **Backend:** Render  
 
-Mongoose - ODM for MongoDB
+### Included in Repository:
+- Clear `README.md` with setup & usage details.
+- Instructions to run locally and in production.
+- Explanation of challenges, design choices, and assumptions.
 
-Render - Deployment platform
+---
 
-APIs
-OpenTDB - Trivia questions database
+## 🧾 How to Run Locally
 
-🚀 Getting Started
-Prerequisites
-Node.js (v18 or higher)
+### Prerequisites
+- Node.js v18+
+- MongoDB (local or Atlas)
+- Git
 
-MongoDB (local installation or MongoDB Atlas account)
+### Installation
+```bash
+# Clone both repositories
+git clone https://github.com/addy0328p/Quiz_Assignment_Backend.git
+git clone https://github.com/addy0328p/Quiz_frontend_assignment.git
 
-Git
-
-Installation
-Clone the repository
-
-bash
-git clone https://github.com/UtkarshxDD/quiz-app-backend/
-cd quiz-app
-Backend Setup
-
-bash
-cd server
+# Backend setup
+cd Quiz_Assignment_Backend
 npm install
-Frontend Setup
-
-bash
-cd ../client
-npm install
-Environment Configuration
-
-Create server/.env:
-
-text
-PORT=5000
-MONGODB_URI=mongodb://localhost:27017/quizapp
-NODE_ENV=development
-FRONTEND_URL=http://localhost:3000
-Create client/.env.local:
-
-text
-REACT_APP_API_URL=http://localhost:5000/api
-Running the Application
-Start Backend Server
-
-bash
-cd server
 npm run dev
-Start Frontend (in a new terminal)
 
-bash
-cd client
+# Frontend setup (in a new terminal)
+cd ../Quiz_frontend_assignment
+npm install
 npm start
-Access the Application
-
-Frontend: http://localhost:3000
-
-Backend API: http://localhost:5000
-
-🌐 Deployment
-Backend (Render)
-Connect your GitHub repository to Render
-
-Create a new Web Service with these settings:
-
-Root Directory: server
-
-Build Command: npm install
-
-Start Command: npm start
-
-Set environment variables in Render dashboard
-
-Frontend (Vercel)
-Connect your GitHub repository to Vercel
-
-Configure deployment settings:
-
-Root Directory: client
-
-Build Command: npm run build
-
-Output Directory: build
-
-Set environment variables in Vercel dashboard
-
-📡 API Endpoints
-Quiz Management
-POST /api/quiz/start - Start a new quiz session
-
-PUT /api/quiz/question/:quizId/:questionId - Update question status
-
-POST /api/quiz/submit/:quizId - Submit completed quiz
-
-GET /api/quiz/results/:quizId - Retrieve quiz results
-
-GET /api/health - Health check endpoint
-
-Example API Usage
-Start Quiz:
-
-bash
-curl -X POST https://quiz-app-backend-2nnz.onrender.com/api/quiz/start \
-  -H "Content-Type: application/json" \
-  -d '{"email":"user@example.com"}'
-Submit Answer:
-
-bash
-curl -X PUT https://quiz-app-backend-2nnz.onrender.com/api/quiz/question/{quizId}/0 \
-  -H "Content-Type: application/json" \
-  -d '{"user_answer":"Paris","visited":true,"attempted":true}'
-🎮 How to Use
-Start Quiz: Enter your email address on the welcome page
-
-Answer Questions: Navigate through 15 trivia questions
-
-Track Progress: Monitor your progress in the sidebar
-
-Submit Quiz: Complete within 30 minutes or auto-submit
-
-View Results: See detailed results with correct answers
-
-🧪 Testing
-Manual Testing
-Test quiz flow from start to finish
-
-Verify timer functionality
-
-Check question navigation
-
-Validate result calculation
-
-API Testing
-You can test the live API endpoints using the following commands:
-
-bash
-# Health Check
-curl https://quiz-app-backend-2nnz.onrender.com/api/health
-
-# Start a quiz
-curl -X POST https://quiz-app-backend-2nnz.onrender.com/api/quiz/start \
-  -H "Content-Type: application/json" \
-  -d '{"email":"test@example.com"}'
-🎨 Design System
-Color Palette
-Background: #0a0a0a (Deep Black)
-
-Cards: #1a1a1a (Dark Gray)
-
-Primary: #00ff88 (Tech Green)
-
-Secondary: #0088ff (Tech Blue)
-
-Warning: #ffaa00 (Amber)
-
-Error: #ff4444 (Red)
-
-Text: #ffffff (White)
-
-Typography
-Font Family: Inter, SF Pro Display, System Fonts
-
-Headings: Bold, increased letter spacing
-
-Body: Regular weight, improved line height
-
-🔧 Configuration
-Environment Variables
-Backend (.env)
-
-text
-PORT=5000
-MONGODB_URI=your_mongodb_connection_string
-NODE_ENV=production
-FRONTEND_URL=https://quiz-app-frontend-eight-eta.vercel.app
-Frontend (.env.production)
-
-text
-REACT_APP_API_URL=https://quiz-app-backend-2nnz.onrender.com/api
-📈 Performance Optimizations
-Lazy Loading: Components loaded on demand
-
-Optimized API Calls: Efficient data fetching
-
-Responsive Images: Optimized for different screen sizes
-
-Caching: Browser caching for static assets
-
-Minification: Production builds are minified
-
-🐛 Known Issues & Solutions
-=======
-# Quiz_Assignment_Backend
->>>>>>> 3028e80e22e2d2c17303344085d7e6bc6cf7c2d6
